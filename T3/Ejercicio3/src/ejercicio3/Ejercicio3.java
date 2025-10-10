@@ -34,7 +34,7 @@ public class Ejercicio3 {
        if(numero2>esMayor){
         esMayor = numero2;
        } if (numero3>esMayor){ 
-       esMayor = numero3;
+        esMayor = numero3;
        
     }
     
