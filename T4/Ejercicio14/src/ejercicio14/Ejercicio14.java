@@ -14,7 +14,12 @@ public class Ejercicio14 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int i = 2;
+        
+        while(i<=100){
+            System.out.println(i);
+            i += 2;
+        } //Uso un bucle while pues no se el numero de veces que debo hacer el bucle y porque resume mucho mas el codigo.
     }
     
 }

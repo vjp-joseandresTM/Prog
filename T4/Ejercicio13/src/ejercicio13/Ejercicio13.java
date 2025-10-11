@@ -19,7 +19,7 @@ public class Ejercicio13 {
         while(i <= 133 ){
             System.out.println(i);
             i += 2;
-        }
+        }//Hasta que la variable i no llegue a 133 se imprimira en pantalla un numero sumado + 2 para que sea par.
    
     }
     
