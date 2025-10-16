@@ -16,7 +16,7 @@ public class Ejercicio11 {
     public static void main(String[] args) {
         int i; //Declaro variable i
         
-        for(i = 0; i <= 6; i++){ //Determino la operacion que voy a realizar.
+        for(i = 1; i <= 6; i++){ //Determino la operacion que voy a realizar.
             System.out.println("Hola"+ i);
         }
     }
