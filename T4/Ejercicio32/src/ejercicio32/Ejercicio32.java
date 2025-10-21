@@ -16,7 +16,7 @@ public class Ejercicio32 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
          System.out.print("Introduzca el año actual: ");
-        int añoActual = sc.nextInt();
+        int anioActual = sc.nextInt();
         System.out.print("Introduzca el mes actual: ");
         int mesActual = sc.nextInt();
         System.out.print("Introduzca el día actual: ");
@@ -24,20 +24,20 @@ public class Ejercicio32 {
 
         // Fecha de nacimiento
         System.out.print("Ahora, introduzca su año de nacimiento: ");
-        int añoNacimiento = sc.nextInt();
+        int anioNacimiento = sc.nextInt();
         System.out.print("Introduzca su mes de nacimiento: ");
         int mesNacimiento = sc.nextInt();
         System.out.print("Por último introduzca su día de nacimiento: ");
         int diaNacimiento = sc.nextInt();
 
         // Inicializar años, meses y días
-        int años = añoActual - añoNacimiento;
+        int años = anioActual - anioNacimiento;
         int meses = mesActual - mesNacimiento;
         int dias = diaActual - diaNacimiento;
 
         // Ajustar días
         if (dias < 0) {
-            meses--; // se "pide prestado" un mes
+            meses--; // se pide prestado un mes
             dias += 30; // aproximamos todos los meses a 30 días para simplificar
         }
 
