@@ -12,7 +12,7 @@ public class Ejercicio27 {
         System.out.print("Introduce el primer número: ");
         num1 = sc.nextDouble();
         System.out.print("Introduce el segundo número: ");
-        num2 = sc.nextDouble();
+        num2 = sc.nextDouble();//Pido que se introduzcan los numeros y lo muestro por pantalla.
 
         do {
             System.out.println("--- MENÚ ---");
@@ -21,39 +21,39 @@ public class Ejercicio27 {
             System.out.println("3. Multiplicar los números");
             System.out.println("4. Dividir los números");
             System.out.println("5. Salir del programa");
-            System.out.print("Elige una opción: ");
+            System.out.print("Elige una opción: ");//Muestro por pantalla las opciones que el usuario puede usar
 
             try {
                 opcion = sc.nextInt();
 
                 switch (opcion) {
-                    case 1:
+                    case 1: //El usuario sumara los dos numeros introducidos
                         System.out.println("Resultado: " + (num1 + num2));
                         break;
-                    case 2:
+                    case 2://El usuario restara los numeros introducidos
                         System.out.println("Resultado: " + (num1 - num2));
                         break;
-                    case 3:
+                    case 3://El usuario multiplicara los numeros introducidos
                         System.out.println("Resultado: " + (num1 * num2));
                         break;
-                    case 4:
+                    case 4://El usuario dividira los numeros introducidos
                         try {
                             if (num2 == 0) {
                                 throw new ArithmeticException();
                             }
                             System.out.println("Resultado: " + (num1 / num2));
-                        } catch (ArithmeticException e) {
+                        } catch (ArithmeticException e) { //Si el usuario intenta dividir entre 0 se imprimira por pantalla.un error
                             System.out.println("Error: No se puede dividir entre 0.");
                         }
                         break;
                     case 5:
                         System.out.println("Saliendo del programa...");
-                        break;
+                        break; //El usuario sale del programa 
                     default:
                         System.out.println("Opción no válida, intenta de nuevo.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Error: Debes introducir un número entero.");
+                System.out.println("Error: Debes introducir un número entero.");//Lanza un error si el numero no es entero.
                 
             }
 

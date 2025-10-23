@@ -16,14 +16,14 @@ public class Ejercicio30 {
      */
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
-       int  aleatorio = (int) Math.floor((Math.random()*100+1));
-       System.out.print("Introduce el primer número: ");
+       int  aleatorio = (int) Math.floor((Math.random()*10+1)); //Le declaro que la variable sea un numero aleatorio
+       System.out.print("Introduce el primer número: "); //Pido un numero en consola 
        int numero = sc.nextInt();
        
-       if (aleatorio==numero){
+       if (aleatorio==numero){ //Si el numero es igual, que felicicte al usuario
            System.out.println("Felicidades, el numero era el mismo");
            
-       }else{
+       }else{ //Si la comparacion de los numeros no es igual
             System.out.println("Lo siento, el numero fue: " + aleatorio);
        }
     }
