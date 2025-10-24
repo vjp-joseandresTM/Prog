@@ -12,12 +12,12 @@ public class secundario {
       
     public static void multiplicar(int numero1, int numero2){
         int resultado = numero1 * numero2;
-        System.out.println("La operacion realizada fue Multiplicar y su resultado fue: " + resultado);
+        System.out.println("La operacion realizada fue Multiplicar y su resultado fue: " + resultado); // Se realizan las operaciones con los datos que se cambian por los de la clase principal, luego se imprimen
     }
     
     public static void sumar(int numero1, int numero2){
         int resultado = numero1 + numero2;
-        System.out.println("La operacion realizada fue Sumar y su resultado fue: " + resultado);
+        System.out.println("La operacion realizada fue Sumar y su resultado fue: " + resultado); // Se realizan las operaciones con los datos que se cambian por los de la clase principal, luego se imprimen
     }
    } 
 
