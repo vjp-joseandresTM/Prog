@@ -2,36 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio3;
+package ejercicio4;
 import java.util.Scanner;
-import paquete2.clase2;
+
 /**
  *
- * @author DAM
+ * @author alumno
  */
-public class Ejercicio3 {
+public class Ejercicio4 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num1;
         int num2;
         int num3;
-       
-        System.out.println("Introduce el primer numero");
+        
+        System.out.println("Introduce el primer numero: ");
         num1 = sc.nextInt();
-        System.out.println("Introduce el segundo numero");
+        System.out.println("Introduce el segundo numero: ");
         num2 = sc.nextInt();
-        System.out.println("Introduce el tercer numero");
+        System.out.println("Introduce el tercer numero :");
         num3 = sc.nextInt();
         
-        clase2.comparacion(num1,num2, num3);
-        
-        /**
-         * Se piden numeros y en la linea 30 se pasan estos a la clase 2.
-         */
+        Menor.comparador(num1, num2, num3);
     }
     
 }
