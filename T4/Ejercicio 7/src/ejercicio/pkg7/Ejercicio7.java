@@ -35,7 +35,13 @@ public class Ejercicio7 {
     }
     
     public static void Vasos(int num1, int num2, int num3, int num4){
-        for()
-    }
-    
+        int cambio;
+        int i;
+        for(i = 1; i<=3; i++){
+            if(num1>num){
+                
+            }
+        }
+        
+        
 }

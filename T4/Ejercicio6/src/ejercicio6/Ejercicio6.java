@@ -22,7 +22,7 @@ public class Ejercicio6 {
     
     }
     
-    public static void Calificador(int nota){
+    public static void Calificador(int nota){//Abrimos un metodo que en funcion de la nota devuelve un 
         if(nota >=0 && nota<= 4){
             System.out.println("Suspenso");
         
