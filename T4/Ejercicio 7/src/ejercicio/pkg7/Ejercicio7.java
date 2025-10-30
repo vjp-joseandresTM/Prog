@@ -38,10 +38,26 @@ public class Ejercicio7 {
         int cambio;
         int i;
         for(i = 1; i<=3; i++){
-            if(num1>num){
-                
+            if(num1>num2){
+             cambio = num1;
+             num1 = num2;
+             num2 = cambio;
             }
+            if(num2>num3){
+             cambio = num2;
+             num2 = num3;
+             num3 = cambio;
+            }
+            if(num3>num4){
+             cambio = num3;
+             num3 = num4;
+             num4 = cambio;
+            }
+           
         }
+         System.out.println("El orden fue " + num1 + "-" + num2 + "-" + num3 + "-" +num4);
+       
         
-        
+  
+    }
 }
