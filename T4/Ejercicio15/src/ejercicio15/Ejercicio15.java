@@ -11,7 +11,7 @@ public class Ejercicio15 {
     public static void main(String[] args) {
       int num1 = numeroUno();
       int num2 = numeroDos();
-      
+      menuOpciones(num1, num2);
     }
     
     public static int numeroUno(){
@@ -48,16 +48,19 @@ public class Ejercicio15 {
             switch (opcion) {
                 case 1:
                     System.out.println("Elegiste opcion 1");
-                    
+                    calculos.sumar(num1, num2);
                     break;
                 case 2:
                     System.out.println("Elegiste opcion 2");
+                    calculos.restar(num1, num2);
                     break;
                 case 3:
                     System.out.println("Elegiste opcion 3");
+                    calculos.multiplicar(num1, num2);
                     break;
                 case 4:
                     System.out.println("Elegiste opcion 4");
+                    calculos.dividir(num1, num2);
                     break;
                 case 5:
                     System.out.println("Hasta la proxima");
