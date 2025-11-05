@@ -22,7 +22,11 @@ public class Ejercicicio17 {
         char letraUser;
         System.out.println("Introduce una letra para jugar: ");
         letraUser = sc.nextLine().charAt(0);
-        return letraUser;
+        return letraUser; 
+        
+        /**
+         * Le pedimos al usuario que introduzca una letra (Char), la almacenamos y la devolvemos.
+         */
         
         
         
@@ -30,6 +34,8 @@ public class Ejercicicio17 {
     public static char generarLetra(){
         int numero = (int) (Math.random()*(122-97+1))+ 97; 
         return (char)numero;
+        
+        //Mediante el math.random generamos un numero, que luego devolveremos en un char.
        
     }
     
@@ -52,6 +58,7 @@ public class Ejercicicio17 {
 
         System.out.println("¡DIN DIN DIN! La letra era:  " + generado + " Los intentos fueron :" + intentos);
         return generado;
+        //Compararemos el char generado con el introducido por el usuario, 
     }
     
 
