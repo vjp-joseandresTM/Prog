@@ -9,6 +9,7 @@ package ejercicio1;
  * @author DAM
  */
 public class Coche {
+    //Declaro atributos
     private String marca;
     private String modelo;
     private String color;
