@@ -21,14 +21,13 @@ public class PruebaClass {
         bici1.setTipo("Montania");
         bici1.setAntiguedad(58);
         
-        Bicicleta bici2 = new Bicicleta();
-        bici2.setMarca("Mitical");
-        bici2.setColor("Nigga");
-        bici2.setTipo("Montania");
-        bici2.setAntiguedad(6);
+        Bicicleta bici2 = new Bicicleta("Mitical", "Nigga","Montania", 6);
+        
+        
         
         bici1.mostrarBicicleta();
-        bici2.mostrarBicicleta();
+        System.out.println(bici2.toString());
+        System.out.println(bici2.getMarca());
         bici1.mostrarAntiguedad();
         bici2.mostrarAntiguedad();
         
