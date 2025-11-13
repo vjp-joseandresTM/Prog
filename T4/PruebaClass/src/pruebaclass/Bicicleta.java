@@ -17,6 +17,8 @@ public class Bicicleta {
     private String tipo;
     private int antiguedad;
     
+    private static int contadorBicicletas = 0;
+    
     //Constructores
     //Lo veremos más adelante
     public Bicicleta(){
@@ -24,6 +26,7 @@ public class Bicicleta {
         color="";
         tipo="";
         antiguedad=0;
+        aumentarContadorBicicletas();
     }
     
     
@@ -32,9 +35,16 @@ public class Bicicleta {
         color="c";
         tipo="t";
         antiguedad=a;
+        aumentarContadorBicicletas();
     }
     
-    
+    public Bicicleta(String marca){
+        marca = marca;
+        color = "";
+        tipo ="";
+        antiguedad = 0;
+         Bicicleta.aumentarContadorBicicletas();
+    }
     //Getters//Setters
     public String getMarca() {
         return marca;
@@ -66,6 +76,18 @@ public class Bicicleta {
     
     public void setAntiguedad(int a){
         antiguedad = a;
+    }
+
+    public static int getContadorBicicletas() {
+        return contadorBicicletas;
+    }
+
+    public static void setContadorBicicletas(int contadorBicicletas) {
+        Bicicleta.contadorBicicletas = contadorBicicletas;
+    }
+    
+    public static void aumentarContadorBicicletas(){
+        contadorBicicletas++;
     }
     //Otros métodos
     public void mostrarAntiguedad(){
