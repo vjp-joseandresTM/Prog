@@ -20,7 +20,7 @@ public class propietario {
     
     public propietario(String nombre, int edad){
         this.nombre = nombre;
-        this
+        this.edad = edad;
     }
    //Getters/setter
     

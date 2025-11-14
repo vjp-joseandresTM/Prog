@@ -10,14 +10,22 @@ package ejercicio15;
  */
 public class Direccion {
     private String calle;
-    private int nCalle;
-    private int nPiso;
+    private int numero;
+    private int nPuerta;
     private String ciudad;
+    
+    
+    public Direccion (){
+        calle = "";
+        numero = 0;
+        nPuerta = 0;
+        ciudad = "";
+    }
     
     public Direccion(String calle, int nPiso, String ciudad, int nCalle){
         this.calle = calle;
-        this.nPiso = nPiso;
-        this.nCalle = nCalle;
+        this.nPuerta = nPiso;
+        this.numero = nCalle;
         this.ciudad = ciudad;
     }
     
@@ -26,14 +34,21 @@ public class Direccion {
     }
     
     public int getNpiso(){
-        return nPiso;
+        return nPuerta;
     }
     
     public int getNcalle(){
-        return nCalle;
+        return numero;
     }
     
     public String getCiudad(){
         return ciudad;
+    }
+    
+    public void mostrarDireccion(){
+        System.out.println("Calle: " + getCalle());
+        System.out.println("Numero de puerta: " + getNpiso());
+        System.out.println("Numero: " + getNcalle());
+        System.out.println("Ciudad: " + getCiudad());
     }
 }
