@@ -14,8 +14,13 @@ public class Ejercicio16_T5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Alumno a1 = new Alumno("Jose",20);
+        Alumno a1 = new Alumno("Jose",5);
+        Alumno a2 = new Alumno("Kevin", 6);
+        Alumno a3 = new Alumno("Sandra",2);
+        
         a1.mostrarAlumno();
+        a2.mostrarAlumno();
+        a3.mostrarAlumno();
     }
     
 }
