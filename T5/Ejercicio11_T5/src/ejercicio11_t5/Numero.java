@@ -9,15 +9,16 @@ package ejercicio11_t5;
  * @author DAM
  */
 public class Numero {
+    
     private int valor; //Escribimos la variable
   
     
     //Iniciamos los constructores
-    public Numero(){
+    public Numero(int valor){
         this.valor = valor;
     }
     
-    public Numero(int valor){
+    public Numero(){
         valor = 0;
     }
     //Establecemos un getter que devuelva valor
@@ -27,6 +28,10 @@ public class Numero {
     //Y un setter.
     public void setValor(int valor) {
         this.valor = valor;
+    }
+    //Mostramos
+    public void mostrarValor(){
+        System.out.println(getValor());
     }
     
     

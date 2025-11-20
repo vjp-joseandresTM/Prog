@@ -34,7 +34,8 @@ public class Ejercicio11_T5 {
     }
     
         //Aqui es donde sumamos los valores para luego ser tomado por el if else
-     public static int sumar(Numero a, Numero b){
+        //CAMBIAR POR LO VISTO EN CLASE...
+       public static int sumar(Numero a, Numero b){
            return a.getValor() + b.getValor();
        }
         //Lo mismo la multiplicacion
