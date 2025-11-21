@@ -51,7 +51,7 @@ public class Empleado {
     
      public void mostrarEmpleado(){
          System.out.println("Nombre:"+ getNombre() );
-         System.out.println("Edad:"+ getSalario());
+         System.out.println("Salario:"+ getSalario());
          System.out.println("Direccion:");
          direccion.mostrarDireccion();
          
