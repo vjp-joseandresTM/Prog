@@ -9,10 +9,12 @@ package ejercicio15;
  * @author DAM
  */
 public class Empleado {
+    //Declaramos los Atributos
     private String nombre;
     private int salario;
     private Direccion direccion;
     
+    //Hacemos los constructores
     public Empleado(){
         nombre = "";
         salario = 0;
@@ -24,7 +26,7 @@ public class Empleado {
         this.salario = salario;
         direccion = new Direccion(calle, nPiso,ciudad,numero);
     } 
-
+    //Geters y setters
     public String getNombre() {
         return nombre;
     }
@@ -48,7 +50,7 @@ public class Empleado {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-    
+    //Metodo para mostrar alumnos
      public void mostrarEmpleado(){
          System.out.println("Nombre:"+ getNombre() );
          System.out.println("Salario:"+ getSalario());
