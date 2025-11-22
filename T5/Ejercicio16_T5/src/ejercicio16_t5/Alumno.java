@@ -9,10 +9,10 @@ package ejercicio16_t5;
  * @author DAM
  */
 public class Alumno {
-    
+ //Creamos los atributos.   
  private String nombre;
  private int nota;
- 
+ //Inicializamos los constructores.
  public Alumno(){
      nombre = "";
      nota = 0;
@@ -22,7 +22,7 @@ public class Alumno {
      this.nombre = nombre;
      this.nota = nota;
  }
-
+//Geters y setters/ Metodos
  public String getNombre() {
         return nombre;
  }
@@ -49,7 +49,7 @@ public class Alumno {
      
  }
  
-
+//Metodo mostrar.
  public void mostrarAlumno(){
      System.out.println("El nombre del alumno: " + getNombre());
      System.out.println("La nota fue: " + getNota() + " Que es un: " + calificacion());

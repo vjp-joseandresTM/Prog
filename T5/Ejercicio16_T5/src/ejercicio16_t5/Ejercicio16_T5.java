@@ -15,6 +15,7 @@ public class Ejercicio16_T5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Creamos los objetos y llamamos al mostrar.
         Alumno a1 = new Alumno("Jose",5);
         Alumno a2 = new Alumno("Kevin", 6);
         Alumno a3 = new Alumno("Sandra",2);
