@@ -9,6 +9,7 @@ package ejercicio24_t5;
  * @author DAM
  */
 public class ProductoRefrigerado extends Producto {
+    //Creamos atributos, getters/setters y mostrar.
     private String codigoOrganismo;
 
     public ProductoRefrigerado(String fechaCaducidad, String numeroLote, String codigoOrganismo) {

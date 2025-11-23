@@ -9,10 +9,11 @@ package ejercicio19_t5;
  * @author DAM
  */
 public class Empleado {
+    //Declaracion de atributos.
     private String nombre;
     private int horasTrabajadas;
     private double tarifaHora;  
-
+    //GETTERS/SETTERS Y MOSTRAR 
     public Empleado(String nombre, int horasTrabajadas, double tarifaHora) {
         this.nombre = nombre;
         this.horasTrabajadas = horasTrabajadas;
@@ -48,7 +49,7 @@ public class Empleado {
     public void setTarifaHora(double tarifaHora) {
         this.tarifaHora = tarifaHora;
     }
-    
+    //Metodo para calcular sueldo
     public double calcularSueldo() {
         if (horasTrabajadas <= 40) {
             return horasTrabajadas * tarifaHora;
