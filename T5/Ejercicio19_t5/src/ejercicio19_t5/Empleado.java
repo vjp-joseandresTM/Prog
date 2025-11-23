@@ -56,5 +56,7 @@ public class Empleado {
             int horasExtra = horasTrabajadas - 40;
             return (40 * tarifaHora) + (horasExtra * tarifaHora * 1.5);
         }
-    }    
+    }
+
+    
 }
