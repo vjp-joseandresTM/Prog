@@ -8,34 +8,33 @@ package ejercicio5_tema6;
  *
  * @author DAM
  */
-public class Ornitorrinco extends Mamifero implements Oviparo{
-    private int numeroHuevos;
+public class Ornitorrinco extends Mamifero implements Oviparo {
 
+    private int numeroHuevos;
 
     public Ornitorrinco(String nombre, String sexo, String color, int edad, int huevos) {
         super(nombre, sexo, color, edad);
-        this.numeroHuevos = huevos;    
-}
+        this.numeroHuevos = huevos;
+    }
 
-@Override
+    @Override
     public String obtenerMensajeOviparo() {
         return "El ornitorrinco es un mamífero ovíparo";
-}
+    }
 
-
-@Override
+    @Override
     public void ponerHuevo() {
         numeroHuevos++;
-}
+    }
 
-
-@Override
+    @Override
     public void incubarHuevo() {
-        if (numeroHuevos > 0) numeroHuevos--;
-}
+        if (numeroHuevos > 0) {
+            numeroHuevos--;
+        }
+    }
 
-
-@Override
+    @Override
     public void mostrarNumHuevos() {
         System.out.println("Número de huevos: " + numeroHuevos);
     }

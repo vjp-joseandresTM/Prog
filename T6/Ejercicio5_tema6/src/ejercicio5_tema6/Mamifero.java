@@ -9,11 +9,11 @@ package ejercicio5_tema6;
  * @author DAM
  */
 public class Mamifero {
-protected String nombre;
-protected String sexo;
-protected String color;
-protected int edad;
 
+    protected String nombre;
+    protected String sexo;
+    protected String color;
+    protected int edad;
 
     public Mamifero(String nombre, String sexo, String color, int edad) {
         this.nombre = nombre;
@@ -24,16 +24,23 @@ protected int edad;
 }
 
 interface Oviparo {
+
     String obtenerMensajeOviparo();
+
     void ponerHuevo();
+
     void incubarHuevo();
+
     void mostrarNumHuevos();
 }
 
-
 interface Volador {
+
     String obtenerMensajeVolador();
+
     void aumentarAlturaVuelo();
+
     void bajarAlturaVuelo();
+
     void mostrarAlturaVuelo();
 }

@@ -13,7 +13,7 @@ public abstract class Circulo extends FiguraGeometrica{
    
    public Circulo(double radio, String color){
        super(color);
-       this.color = color;
+       this.radio = radio;
    }
    
    public Circulo(){
