@@ -12,11 +12,25 @@ public class Murcielago extends Mamifero implements Volador {
 
     private int alturaVuelo;
 
+    public Murcielago(){
+        super();
+        alturaVuelo = 0;
+    }
+
     public Murcielago(String nombre, String sexo, String color, int edad, int altura) {
         super(nombre, sexo, color, edad);
         this.alturaVuelo = altura;
     }
 
+    public int getAlturaVuelo() {
+        return alturaVuelo;
+    }
+
+    public void setAlturaVuelo(int alturaVuelo) {
+        this.alturaVuelo = alturaVuelo;
+    }
+    
+    
     @Override
     public String obtenerMensajeVolador() {
         return "El murciélago es un animal volador";

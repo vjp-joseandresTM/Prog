@@ -11,11 +11,26 @@ package ejercicio5_tema6;
 public class Ornitorrinco extends Mamifero implements Oviparo {
 
     private int numeroHuevos;
-
+    
+    public Ornitorrinco(){
+        super();
+        numeroHuevos = 0;
+    }
+    
     public Ornitorrinco(String nombre, String sexo, String color, int edad, int huevos) {
         super(nombre, sexo, color, edad);
         this.numeroHuevos = huevos;
     }
+
+    public int getNumeroHuevos() {
+        return numeroHuevos;
+    }
+
+    public void setNumeroHuevos(int numeroHuevos) {
+        this.numeroHuevos = numeroHuevos;
+    }
+    
+    
 
     @Override
     public String obtenerMensajeOviparo() {
