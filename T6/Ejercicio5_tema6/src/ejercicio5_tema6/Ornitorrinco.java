@@ -29,6 +29,11 @@ public class Ornitorrinco extends Mamifero implements Oviparo {
     public void setNumeroHuevos(int numeroHuevos) {
         this.numeroHuevos = numeroHuevos;
     }
+
+    @Override
+    public String toString() {
+        return "Ornitorrinco{" + "numeroHuevos=" + numeroHuevos + '}';
+    }
     
     
 

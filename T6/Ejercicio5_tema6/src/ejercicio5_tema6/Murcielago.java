@@ -29,6 +29,11 @@ public class Murcielago extends Mamifero implements Volador {
     public void setAlturaVuelo(int alturaVuelo) {
         this.alturaVuelo = alturaVuelo;
     }
+
+    @Override
+    public String toString() {
+        return "Murcielago{" + "alturaVuelo=" + alturaVuelo + '}';
+    }
     
     
     @Override
