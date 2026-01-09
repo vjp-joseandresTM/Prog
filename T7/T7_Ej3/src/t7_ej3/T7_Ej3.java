@@ -35,7 +35,7 @@ public class T7_Ej3 {
     //Generamos aleatorios
     public static void genRand(int[] numero) {
         for (int i = 0; i < numero.length; i++) {
-            numero[i] = (int) (Math.random() * 10) + 1;
+            numero[i] = (int) (Math.random() * 6) + 1;
         }
     }
     //Imprimimos los numeros 
