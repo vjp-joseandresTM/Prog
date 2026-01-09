@@ -13,12 +13,14 @@ public class T7_Ej1 {
     /**
      * @param args the command line arguments
      */
+    
+    //Metodo principal que llama a los demas metodos.
     public static void main(String[] args) {
         int[] numeros = new int[10];
         rellenaVector(numeros);
         mostrarVector(numeros);
     }
-    
+    //Metodo que mediante un bucle rellena los vectores del array
     public static void rellenaVector(int[] numeros){
         Scanner sc = new Scanner(System.in);
         int i;
@@ -29,7 +31,7 @@ public class T7_Ej1 {
             numeros[i] = sc.nextInt();
         }
     }
-    
+    //Muestra con la informacion proporcionada por el metodo de rellenar, pero solo los impares
     public static void mostrarVector(int[] numeros){
         int i;
         for(i = 0; i<10; i++){
