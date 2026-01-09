@@ -34,7 +34,7 @@ public class T7_Ej8 {
         numero = sc.nextInt();
         return numero;
     }
-    
+    //Cojemos el numero y lo dividimos en cifras
     public static void dividirCifras(int[] vector, int numero){
         
         for (int i = 0; i < vector.length; i++) {
@@ -44,6 +44,7 @@ public class T7_Ej8 {
             
         }
     }
+    //Mostramos los numeros 
     
     public static void mostrar(int[] vector){
         for(int i = 0; i< vector.length ; i++){
