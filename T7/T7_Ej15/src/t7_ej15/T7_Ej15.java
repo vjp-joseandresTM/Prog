@@ -109,7 +109,7 @@ public class T7_Ej15 {
     public static void mostrarVentasPares(int[] ventas) {
 
         for (int i = 0; i < 10; i++) {
-            if (ventas[i] % 2 == 0) {
+            if ((ventas[i]+1) % 2 == 0) {
                 System.out.println(ventas[i]);
             }
         }

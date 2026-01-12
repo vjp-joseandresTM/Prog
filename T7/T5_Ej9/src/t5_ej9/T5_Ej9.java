@@ -37,11 +37,11 @@ public class T5_Ej9 {
     //Calculamos las cifras que tiene ese numero 
     public static int calcCifras(int numero){
         int contador = 0;
-        int aux = numero;
+       
         do{
-          aux = aux/10;
+          numero = numero/10;
           contador++;
-        }while(aux != 0);
+        }while(numero > 0);
         return contador;
     }
     //Cojemos el numero y lo dividimos en cifras
