@@ -15,7 +15,7 @@ public class T7_Ej6 {
      * NO SER CONSIDERADO PRIMO.
      */
     
-    //Se encarga de q
+    //Se encarga de crear las variables y llamar a los metodos.
     public static void main(String[] args) {
         int[] primos = new int[80];
         int contador = 0;
@@ -23,7 +23,7 @@ public class T7_Ej6 {
         
         primos(primos, contador, numero);
     }
-    
+    //Rellena el array con los numeros primos llamando a un metodo que comprueba si son primos.
     public static void primos(int[] primos, int contador, int numero){
         while(contador<80){
           if(esPrimo(numero)){
@@ -33,11 +33,12 @@ public class T7_Ej6 {
           numero++;
         }
         
-        for (int i = 0; i < primos.length; i++) {
+        for (int i = 0; i < primos.length; i++) { // Tambien los imprime por pantalla
             System.out.println((i+1) + "- " + primos[i]);
         }
     }
     
+    //Metodo dedicado a hacer la comprobacion de los numeros primos.
     public static boolean esPrimo(int numero){
 
         for(int i = 2; i <= Math.sqrt(numero);i++){
