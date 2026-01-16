@@ -22,13 +22,13 @@ public class T7_Ej11 {
     //Generamos los numeros y hacemos la comprobacion de si son repetidos
     public static void rellenar(int[] numeros) {
         int i = 0;
-        while (i < numeros.length) {
+        while (i < numeros.length) { //Al saber el numero de interacciones seria mejor usar For. TOMAR APUNTE
             int aleatorio = (int) (Math.random() * 10); // 0 a 9
             boolean repetido = false;
 
             for (int j = 0; j < i && !repetido; j++) {
                 if (numeros[j] == aleatorio) {
-                    repetido = true;
+                    repetido = true;//Paro el bucle (CAMBIAR)
                 }
             }
 
@@ -41,7 +41,7 @@ public class T7_Ej11 {
     }
     //Imprimimos los numeros por pantalla, pasando por todo el array.
     public static void mostrar(int[] numeros) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < numeros.length; i++) {
             System.out.println(numeros[i]);
         }
     }
