@@ -9,13 +9,14 @@ import java.util.Scanner;
  * @author alumno
  */
 public class T7_Ej5 {
-
-    public final static int FIL = 4;
+    //Declaramos constantes con el tamaño de 
+    public final static int FIL = 4; 
     public final static int COL = 2;
 
     /**
      * @param args the command line arguments
      */
+    //Creamos la variable y llamamos a los metodos
     public static void main(String[] args) {
         int[][] matriz = new int[FIL][COL];
         numsIntro(matriz);
@@ -25,7 +26,7 @@ public class T7_Ej5 {
         System.out.print("\n");
         suma(matriz);
     }
-    
+    //Metodo que pide al usuario los numeros
     public static void numsIntro(int[][]matriz){
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce los numeros:");
@@ -38,15 +39,15 @@ public class T7_Ej5 {
     }
     
   
-    
+    //Muestra el array 
     public static void mostrar(int[][] matriz){
         for (int i = 0; i < FIL; i++) {
             for (int j = 0; j < COL; j++) {
-                System.out.println("["+ i + j +"]-->"+matriz[i][j]);
+                System.out.print("["+ i + j +"]-->"+matriz[i][j]);
             }
         }
     }
-
+    //Busca cual es el numero mayor de los introducidos
     public static void mayor(int[][] matriz) {
         int mayor = matriz[0][0];
         for (int i = 0; i < FIL; i++) {
@@ -63,7 +64,7 @@ public class T7_Ej5 {
         System.out.println("El mayor es: " + mayor);
 
     }
-
+    //Busca el  menor de todos
     public static void menor(int[][] matriz) {
         int menor = matriz[0][0];
         for (int i = 0; i < FIL; i++) {
@@ -80,7 +81,7 @@ public class T7_Ej5 {
         System.out.println("El menor es: " + menor);
 
     }
-    
+    //Suma los numeros de la matriz y muestra
     public static void suma(int [][] matriz){
         int suma = 0;
         for (int i = 0; i < FIL; i++) {
