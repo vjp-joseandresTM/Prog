@@ -20,6 +20,7 @@ public class T7_Ej1 {
         rellenaVector(numeros);
         mostrarVector(numeros);
     }
+    
     //Metodo que mediante un bucle rellena los vectores del array
     public static void rellenaVector(int[] numeros){
         Scanner sc = new Scanner(System.in);
