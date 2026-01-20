@@ -95,7 +95,7 @@ public class T7_Ej14 {
         System.out.println("La temperatura media del mes es: " + media + "ºC.");
     }
     
-    //Metodo qu
+    //Metodo quue dice cual dia es el mas calurosos
     public static void masCaluroso(int[][] matriz, String[] diasSemana) {
         int max = matriz[0][0];
         for (int i = 0; i < SEM; i++) {
