@@ -126,6 +126,16 @@ public class T7_EJ16 {
         
     }
     
+    public static void asignaturaDificil(String[] asignaturas, int[][] notas){
+        int asignaturaPeor = -1;
+        
+        for (int j = 0; j < 10; j++) {
+            for (int i = 0; i < 10; i++) {
+                
+            }
+        }
+    }
+    
     
 
 }
