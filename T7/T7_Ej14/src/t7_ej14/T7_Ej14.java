@@ -43,10 +43,10 @@ public class T7_Ej14 {
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    rellenarTemp(diasSemana, matriz);
+                    rellenarTemp( matriz);
                     break;
                 case 2:
-                    mostrarTemp(diasSemana, matriz);
+                    mostrarTemp( matriz);
                     break;
                 case 3:
                     mediaMes(matriz);
@@ -63,7 +63,7 @@ public class T7_Ej14 {
         } while (opcion != 5);
     }
     //Metodo que rellena la temperatura
-    public static void rellenarTemp(String[] diasSemana, int[][] matriz) {
+    public static void rellenarTemp( int[][] matriz) {
         for (int i = 0; i < SEM; i++) {
             for (int j = 0; j < DIAS; j++) {
                 matriz[i][j] = (int) (Math.random() * 46);
@@ -72,7 +72,7 @@ public class T7_Ej14 {
         }
     }
     //Metodo con que gracias a la temperatura rellenaa la muestra.
-    public static void mostrarTemp(String[] diasSemana, int[][] matriz) {
+    public static void mostrarTemp( int[][] matriz) {
         System.out.println("\n");
         for (int i = 0; i < SEM; i++) {
             for (int j = 0; j < DIAS; j++) {
