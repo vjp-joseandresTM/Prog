@@ -12,16 +12,21 @@ import java.util.Scanner;
  */
 public class T7_EJ16 {
 
+    public static final int FIL = 6;
+    public static final int COL = 4;
+
     /**
      * @param args the command line arguments
      */
+    
+    //Declaramos los arrays y llamamos al metodo encargado del menu.
     public static void main(String[] args) {
         String[] alumnos = {"Pepe", "Juan", "Ana", "Marta", "Pedro", "Maria"};
         String[] asignaturas = {"Lengua", "Mates", "Historia", "Fisica"};
-        int[][] notas = new int[6][4];
+        int[][] notas = new int[FIL][COL];
         menu(alumnos, asignaturas, notas);
     }
-
+    //Muestra las opciones del menu y llama a los metodos dependiendo de la opcion selecionada.
     public static void menu(String[] alumnos, String[] asignaturas, int[][] notas) {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
@@ -52,21 +57,23 @@ public class T7_EJ16 {
                     peorAsig(alumnos, asignaturas, notas);
                     break;
                 case 5:
-
+                    asignaturaDificil(asignaturas, notas);
                     break;
                 case 6:
-
+                    System.out.println("Saliendo del programa... ");
                     break;
+                default:
+                    System.out.println("Opcion no valida...");
 
             }
 
         } while (opcion != 6);
     }
-
+    //Metodo que pedira al usuario las notas de los alumnos.
     public static void rellenarNotas(String[] alumnos, String[] asignaturas, int[][] notas, Scanner sc) {
-        for (int i = 0; i < alumnos.length; i++) {
+        for (int i = 0; i < FIL; i++) {
             System.out.println("Alumno: " + alumnos[i]);
-            for (int j = 0; j < asignaturas.length; j++) {
+            for (int j = 0; j < COL; j++) {
                 System.out.println("Nota de " + asignaturas[j] + ": ");
                 notas[i][j] = sc.nextInt();
             }
@@ -74,11 +81,11 @@ public class T7_EJ16 {
         }
 
     }
-
+    //Muestra las notas que anteriormente el usuario indico.
     public static void mostrarNotas(String[] alumnos, String[] asignaturas, int[][] notas, Scanner sc) {
-        for (int i = 0; i < alumnos.length; i++) {
+        for (int i = 0; i < FIL; i++) {
             System.out.println("Alumno: " + alumnos[i]);
-            for (int j = 0; j < asignaturas.length; j++) {
+            for (int j = 0; j < COL; j++) {
                 System.out.println("Nota de " + asignaturas[j] + ": " + notas[i][j]);
 
             }
@@ -86,56 +93,66 @@ public class T7_EJ16 {
         }
         System.out.println("\n");
     }
-
+    //Muestra el alumno con mejores califikcaciones.
     public static void masNota(String[] alumnos, String[] asignaturas, int[][] notas) {
         int mejor = -1;
         String mejorAlumno = "";
-        for (int i = 0; i < alumnos.length; i++) {
-            int aux = 0;
-            for (int j = 0; j < notas[i].length; j++) {
-                aux = aux +notas[i][j];
-                notas[i][j] = notas[i][j] + aux;
+        int aux;
+        for (int i = 0; i < FIL; i++) {
+            aux = 0;
+            for (int j = 0; j < COL; j++) {
+                aux = aux + notas[i][j];
+
             }
             int media = aux / notas[i].length;
-            if(media>mejor){
+            if (media > mejor) {
                 mejor = media;
                 mejorAlumno = alumnos[i];
             }
         }
-        System.out.println("El mejor alumno fue: "+ mejorAlumno+" cuya media es: "+ mejor);
+        System.out.println("El mejor alumno fue: " + mejorAlumno + " cuya media es: " + mejor);
     }
-    
-    public static void peorAsig(String[] alumnos, String[] asignaturas, int[][] notas){
+    //Dice cual es el alumno con el numero maximo suspendido y cual debe mejorar.
+    public static void peorAsig(String[] alumnos, String[] asignaturas, int[][] notas) {
         int suspensosMax = -1;
         String alumnoSuspenso = "";
-        
-        for (int i = 0; i < alumnos.length; i++) {
-            int suspensos = 0;
-            for (int j = 0; j < notas[i].length; j++) {
-                if(notas[i][j]<5){
+        int suspensos;
+        for (int i = 0; i < FIL; i++) {
+            suspensos = 0;
+            for (int j = 0; j < COL; j++) {
+                if (notas[i][j] < 5) {
                     suspensos++;
                 }
             }
-            if(suspensos > suspensosMax){
+            if (suspensos > suspensosMax) {
                 suspensosMax = suspensos;
                 alumnoSuspenso = alumnos[i];
             }
         }
-        
-        System.out.println("El alumno con mas suspensos fue: "+alumnoSuspenso+ "con "+suspensosMax+" asignaturas suspensas.");
-        
+
+        System.out.println("El alumno con mas suspensos fue: " + alumnoSuspenso + "con " + suspensosMax + " asignaturas suspensas.");
+
     }
-    
-    public static void asignaturaDificil(String[] asignaturas, int[][] notas){
-        int asignaturaPeor = -1;
-        
-        for (int j = 0; j < 10; j++) {
-            for (int i = 0; i < 10; i++) {
-                
+    //Muestra la asigna con mas tasa de suspensos.
+    public static void asignaturaDificil(String[] asignaturas, int[][] notas) {
+        int asignaturaPeor = 500;
+        String nombreDePeor = "";
+        int suma;
+        for (int j = 0; j < COL; j++) {
+            suma = 0;
+
+            for (int i = 0; i < FIL; i++) {
+                suma = suma + notas[i][j];
+
+            }
+            int media = suma / COL;
+            if (media < asignaturaPeor) {
+                asignaturaPeor = media;
+                nombreDePeor = asignaturas[j];
             }
         }
+
+        System.out.println(nombreDePeor + " fue la asignatura mas dificil, con una media de " + asignaturaPeor);
     }
-    
-    
 
 }
