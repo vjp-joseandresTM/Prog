@@ -17,6 +17,8 @@ public class T7_REPASO_EJ17 {
         int[] numeros = new int[10];
         genNum(numeros);
         mostrador(numeros);
+        organizador(numeros);
+        mostrador(numeros);
     }
     
     public static void genNum(int[] numeros){
@@ -39,11 +41,13 @@ public class T7_REPASO_EJ17 {
     }
     
     public static void organizador(int[] numeros){
-        int aux;
+        
         for (int i = 0; i < numeros.length; i++) {
-            for(int j = 0; i < numeros.length;j++){
-                if(numeros[i]>numeros[i+1]){
-                    
+            for(int j = 0; j < numeros.length - 1;j++){
+                if(numeros[j]>numeros[j+1]){
+                    int aux = numeros[j];
+                    numeros[j] = numeros[j+1];
+                    numeros[j+1] = aux;
                 }
             }
         }
