@@ -36,7 +36,7 @@ public class T8_EJ1 {
       double notas = sc.nextDouble();
       return notas;
     }
-    //En este metodo obtenemos las notas con un bucle, las sumaremos y fin
+    //En este metodo obtenemos las notas con un bucle, las sumaremos y finalmente haremos la media que sera lo que devolvamos.
     public static double calcMedia(Asignaturas[] asig){
         double suma = 0;
         for (int i = 0; i < asig.length; i++) {
