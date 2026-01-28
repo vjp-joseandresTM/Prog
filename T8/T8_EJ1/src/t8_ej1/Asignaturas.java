@@ -9,9 +9,11 @@ package t8_ej1;
  * @author alumno
  */
 public class Asignaturas {
+    //Atributos
     private String nombreAsig;
     private double notas;
 
+    //Constructores
     public Asignaturas(String nombreAsig, double notas) {
         this.nombreAsig = nombreAsig;
         this.notas = notas;
@@ -21,7 +23,7 @@ public class Asignaturas {
         nombreAsig = "";
         notas = 0;
     }
-
+    //Getters/Setters
     public String getNombreAsig() {
         return nombreAsig;
     }
@@ -37,7 +39,7 @@ public class Asignaturas {
     public void setNotas(double notas) {
         this.notas = notas;
     }
-
+    //Metodo tooString
     @Override
     public String toString() {
         return "Asignaturas{" + "nombreAsig=" + nombreAsig + ", notas=" + notas + '}';
