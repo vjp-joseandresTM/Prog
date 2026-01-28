@@ -58,9 +58,13 @@ public class T8_EJ7 {
     }
     
     public static void randTemp(Dia[] dias){
+        int nombDia = (int)(Math.random()*8);
+        
         for (int i = 0; i < dias.length; i++) {
+        
         int temp = (int) (Math.random() * 41); // 0 a 40 grados
         dias[i].setTemperatura(temp);
+        
         }
     }
 }
