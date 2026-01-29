@@ -13,6 +13,7 @@ public class Dia {
     private String nombreDia;
     private int temperatura;
     
+    //Constructores por defecto y parametrizado.
     public Dia(){
         this.nombreDia = "";
         this.temperatura = 0;
@@ -23,7 +24,8 @@ public class Dia {
         this.nombreDia = nombreDia;
         this.temperatura = temperatura;
     }
-
+    
+    //Getters y Setterss
     public String getNombreDia() {
         return nombreDia;
     }
@@ -39,7 +41,7 @@ public class Dia {
     public void setTemperatura(int temperatura) {
         this.temperatura = temperatura;
     }
-
+    //Metodo toString
     @Override
     public String toString() {
         return "Dia{" + "nombreDia=" + nombreDia + ", temperatura=" + temperatura + '}';
