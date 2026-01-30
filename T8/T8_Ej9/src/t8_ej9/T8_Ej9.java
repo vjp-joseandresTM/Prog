@@ -26,7 +26,7 @@ public class T8_Ej9 {
         for (int i = 0; i < alumnos.length; i++) {
             alumnos[i] = new Alumno();
             alumnos[i].setNombreAlumno(nombresAlumnos[i]);
-            System.out.println(alumnos[i].getNombreAlumno());
+
         }
 
     }
@@ -52,17 +52,26 @@ public class T8_Ej9 {
                     break;
                 case 2:
                     System.out.println("\n OPCION 2");
+                    mostrarNotas(alumnos);
                     break;
                 case 3:
                     System.out.println("\n OPCION 3");
+                    mejorAlumno(alumnos);
+                    break;
                 case 4:
                     System.out.println("\n OPCION 4");
+                    alumnoSuspenso(alumnos);
+                    break;
                 case 5:
                     System.out.println("\n OPCION 5");
+                    
+                    break;
                 case 6:
                     System.out.println("Gracias por usar el programa... HASTA LUEGO!");
+
+                    break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("POR FAVOR USE UNA OPCION CORRECTA!!!!!");
             }
 
         } while (opcion != 6);
@@ -75,7 +84,7 @@ public class T8_Ej9 {
         for (Alumno al : alumnos) {
             System.out.println("\n Alumno: " + al.getNombreAlumno());
             Asignatura[] notas = new Asignatura[4];
-            
+
             for (int i = 0; i < asignaturas.length; i++) {
                 System.out.print("Nota de " + asignaturas[i] + ": ");
                 float nota = sc.nextFloat();
@@ -86,16 +95,58 @@ public class T8_Ej9 {
 
         }
     }
-    
-    public static void mostrarNotas(Alumno[] alumnos){
-        for(Alumno al: alumnos){
-            System.out.println("\n Alumno:  "+ al.getNombreAlumno());
-                    for(Asignatura a: al.getNotas()){
-                        System.out.println(a.getNombreAsignatura()+ ": "+ al.getNotas());
-        }
-            
+
+    public static void mostrarNotas(Alumno[] alumnos) {
+        for (Alumno al : alumnos) {
+            System.out.println("\n Alumno:  " + al.getNombreAlumno());
+            for (Asignatura a : al.getNotas()) {
+                System.out.println(a.getNombreAsignatura() + ": " + a.getNota());
+            }
+
         }
 
+    }
+
+    public static void mejorAlumno(Alumno[] alumnos) {
+        Alumno mejor = alumnos[0];
+        float mejorMedia = 0;
+        for (Alumno al : alumnos) {
+            float suma = 0;
+            for (Asignatura a : al.getNotas()) {
+                suma = suma + a.getNota();
+
+            }
+            float media = suma / al.getNotas().length;
+
+            if (media > mejorMedia) {
+                mejorMedia = media;
+                mejor = al;
+            }
+        }
+        System.out.println("El mejor alumno " + mejor.getNombreAlumno() + ", con media: " + mejorMedia);
+    }
+
+    public static void alumnoSuspenso(Alumno[] alumnos) {
+        Alumno peor = alumnos[0];
+        float maxSuspensos = 0;
+
+        for (Alumno al : alumnos) {
+            int suspensos = 0;
+            for (Asignatura a : al.getNotas()) {
+                if (a.getNota() < 5) {
+                    suspensos++;
+                }
+            }
+            if (suspensos > maxSuspensos) {
+                maxSuspensos = suspensos;
+                peor = al;
+            }
+        }
+        System.out.println("El alumno mas suspenso fue: " + peor.getNombreAlumno() + " con " + maxSuspensos + " Suspensas.");
+    }
+    
+    public static void asigMasDificil(){
+        
     }
 
 }
