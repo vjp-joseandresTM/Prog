@@ -15,6 +15,8 @@ public class T8_Ej9 {
     /**
      * @param args the command line arguments
      */
+    
+    //Metodo main llaman
     public static void main(String[] args) {
         Alumno[] alumnos = new Alumno[3];
         String[] nombresAlumnos = {"Pepe", "Juan", "Marta"};
@@ -64,7 +66,7 @@ public class T8_Ej9 {
                     break;
                 case 5:
                     System.out.println("\n OPCION 5");
-                    
+                    asigMasDificil(alumnos);
                     break;
                 case 6:
                     System.out.println("Gracias por usar el programa... HASTA LUEGO!");
@@ -144,9 +146,27 @@ public class T8_Ej9 {
         }
         System.out.println("El alumno mas suspenso fue: " + peor.getNombreAlumno() + " con " + maxSuspensos + " Suspensas.");
     }
-    
-    public static void asigMasDificil(){
-        
+
+    public static void asigMasDificil(Alumno[] alumnos) {
+        String[] asignaturas = {"Lengua", "Mates", "Historia", "Fisica"};
+        float peorMedia = 10;
+        String peorAsignatura = "";
+
+        for (int i = 0; i < asignaturas.length; i++) {
+            float suma = 0;
+            for (Alumno al : alumnos) {
+                suma = suma + al.getNotas()[i].getNota();
+            }
+
+            float media = suma / alumnos.length;
+
+            if (media < peorMedia) {
+                peorMedia = media;
+                peorAsignatura = asignaturas[i];
+            }
+        }
+
+        System.out.println("Asignatura mas dificil: " + peorAsignatura + "(media: " + peorMedia + ")");
     }
 
 }
