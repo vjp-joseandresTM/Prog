@@ -9,9 +9,10 @@ package t8_ej9;
  * @author alumno
  */
 public class Alumno {
+    
     private String nombreAlumno;
     private Asignatura[] notas;
-    
+    //Constructores
     public Alumno(){
         this.nombreAlumno = "";
         this.notas = new Asignatura[4];
@@ -22,6 +23,7 @@ public class Alumno {
         this.notas = notas;
     }
 
+    //Getters y setters
     public String getNombreAlumno() {
         return nombreAlumno;
     }
@@ -37,7 +39,8 @@ public class Alumno {
     public void setNotas(Asignatura[] notas) {
         this.notas = notas;
     }
-
+    
+    //Metodo override que muestra
     @Override
     public String toString() {
         return "Alumno{" + "nombreAlumno=" + nombreAlumno + ", notas=" + notas + '}';

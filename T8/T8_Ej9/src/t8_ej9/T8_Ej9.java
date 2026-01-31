@@ -16,14 +16,14 @@ public class T8_Ej9 {
      * @param args the command line arguments
      */
     
-    //Metodo main llaman
+    //Metodo main llama a los objetos y metodos para proceder.
     public static void main(String[] args) {
         Alumno[] alumnos = new Alumno[3];
         String[] nombresAlumnos = {"Pepe", "Juan", "Marta"};
         genAlumn(alumnos, nombresAlumnos);
         menu(alumnos);
     }
-
+    //Rellenamos los nombres en el array.
     public static void genAlumn(Alumno[] alumnos, String[] nombresAlumnos) {
         for (int i = 0; i < alumnos.length; i++) {
             alumnos[i] = new Alumno();
@@ -33,6 +33,7 @@ public class T8_Ej9 {
 
     }
 
+    //Metodo menu que llama a otros metodos.
     public static void menu(Alumno[] alumnos) {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
@@ -79,7 +80,7 @@ public class T8_Ej9 {
         } while (opcion != 6);
 
     }
-
+    //Rellenamos las notas de las asignaturas en cada alumno
     public static void rellenarNotas(Alumno[] alumnos) {
         Scanner sc = new Scanner(System.in);
         String[] asignaturas = {"Lengua", "Mates", "Historia", "Fisica"};
@@ -98,6 +99,7 @@ public class T8_Ej9 {
         }
     }
 
+    //Mostramos lo que hemos rellenado en el metodo anterior.
     public static void mostrarNotas(Alumno[] alumnos) {
         for (Alumno al : alumnos) {
             System.out.println("\n Alumno:  " + al.getNombreAlumno());
@@ -109,6 +111,7 @@ public class T8_Ej9 {
 
     }
 
+    //Hacemos la media de los alumnos y comprobamos quien es el alumno cuya media sea mas alta.
     public static void mejorAlumno(Alumno[] alumnos) {
         Alumno mejor = alumnos[0];
         float mejorMedia = 0;
@@ -128,6 +131,7 @@ public class T8_Ej9 {
         System.out.println("El mejor alumno " + mejor.getNombreAlumno() + ", con media: " + mejorMedia);
     }
 
+    //Metodo similar al anterior que comprueba cual es el alumno que tiene mas notas suspensas.
     public static void alumnoSuspenso(Alumno[] alumnos) {
         Alumno peor = alumnos[0];
         float maxSuspensos = 0;
@@ -147,6 +151,7 @@ public class T8_Ej9 {
         System.out.println("El alumno mas suspenso fue: " + peor.getNombreAlumno() + " con " + maxSuspensos + " Suspensas.");
     }
 
+    //Metodo que observa cual es la asignatura que los alumnos tiene suspensa y vemos cual es la mas suspendida.
     public static void asigMasDificil(Alumno[] alumnos) {
         String[] asignaturas = {"Lengua", "Mates", "Historia", "Fisica"};
         float peorMedia = 10;
