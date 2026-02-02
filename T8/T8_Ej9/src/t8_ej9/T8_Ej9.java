@@ -63,7 +63,6 @@ public class T8_Ej9 {
                     break;
                 case 4:
                     System.out.println("\n OPCION 4");
-                    alumnoSuspenso(alumnos);
                     break;
                 case 5:
                     System.out.println("\n OPCION 5");

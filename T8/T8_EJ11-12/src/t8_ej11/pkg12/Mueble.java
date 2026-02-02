@@ -13,7 +13,7 @@ public class Mueble {
     private double precio;
     private String descripcion;
 
-    //Getters y setters
+
     public Mueble() {
         this.precio = 0F;
         this.descripcion = "";
@@ -23,7 +23,7 @@ public class Mueble {
         this.precio = precio;
         this.descripcion = descripcion;
     }
-
+    //Getters y setters
     public double getPrecio() {
         return precio;
     }
