@@ -12,13 +12,16 @@ import java.util.Scanner;
  */
 public class EJ_1516 {
 
+    //Creacion de objetos para acceso desde cualquier metodo.
     static Pelicula[] peliculas = new Pelicula[5];
     static int numPeliculas = 0;
 
+    //Main que llama solo al menu.
     public static void main(String[] args) {
         menu();
     }
 
+    //menu que llama a las opciones necesarias.
     public static void menu() {
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -34,8 +37,7 @@ public class EJ_1516 {
             System.out.println("8. Mostrar películas por texto");
             System.out.println("9. Cambiar 'a' por 'e' en la última película");
             System.out.println("10. Convertir títulos a MAYÚSCULAS");
-            System.out.println("11. SALIR");
-            System.out.println("12. SALIR...");
+            System.out.println("11. SALIR...");
             System.out.print("Opción: ");
             opcion = sc.nextInt();
 
@@ -60,14 +62,27 @@ public class EJ_1516 {
 
                     break;
                 case 7:
+                    mostrarSociosPorLetra();
+                    break;
+                case 8:
+                    mostrarPeliculasPorTexto();
+                    break;
+                case 9:
+                    cambiarAporE();
+                    break;
+                case 10:
+                    convertirTitulosMayus();
+                    break;
+                case 11:
                     System.out.println("Gracias por usar... Adios!");
                     break;
                 default:
                     System.out.println("Opción incorrecta");
             }
-        } while (opcion != 7);
+        } while (opcion != 11);
     }
 
+    //Rellenar peliculas y las personas que la visionaron.
     public static void rellenarPelicula() {
         Scanner sc = new Scanner(System.in);
         if (numPeliculas >= peliculas.length) {
@@ -95,16 +110,18 @@ public class EJ_1516 {
         System.out.println("Película añadida correctamente.");
     }
 
+    //Mostrar info de la pelicula
     public static void mostrarPeliculas() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
-
+            return;
         }
         for (int i = 0; i < numPeliculas; i++) {
             System.out.println((i + 1) + ". " + peliculas[i].getTitulo());
         }
     }
 
+    //Mostrar la pelicula y socios que la vieron 
     public static void mostrarPeliculasYSocios() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
@@ -118,7 +135,7 @@ public class EJ_1516 {
             }
         }
     }
-
+    //Vemos que pelicula es la que menos rentable fue
     public static void peliculaMenosRentable() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
@@ -156,6 +173,7 @@ public class EJ_1516 {
                 + " con beneficio " + minBeneficio);
     }
 
+    //Buscar nombre de pelicula.
     public static void buscarPelicula() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce título: ");
@@ -175,7 +193,7 @@ public class EJ_1516 {
         }
         System.out.println("No encontrada.");
     }
-
+    //Contar socios con mayor aportacion
     public static void contarSociosMayores() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Cantidad mínima: ");
@@ -190,7 +208,8 @@ public class EJ_1516 {
         }
         System.out.println("Socios que pagaron más de " + x + ": " + contador);
     }
-
+    
+    //Mostrar socios por determinada letra
     public static void mostrarSociosPorLetra() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
@@ -211,7 +230,7 @@ public class EJ_1516 {
             }
         }
     }
-
+    //Mostrar peliculas por titulo inicil
     public static void mostrarPeliculasPorTexto() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
@@ -231,7 +250,7 @@ public class EJ_1516 {
             }
         }
     }
-
+    //Cambiar a por e
     public static void cambiarAporE() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");
@@ -247,7 +266,8 @@ public class EJ_1516 {
 
         System.out.println("Nuevo título de la última película: " + nuevoTitulo);
     }
-
+    
+    //Convertir titulos a mayuscula.
     public static void convertirTitulosMayus() {
         if (numPeliculas == 0) {
             System.out.println("No hay películas.");

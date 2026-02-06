@@ -13,6 +13,7 @@ public class Pelicula {
     private double costoLicencia;
     private Socio[] socios;
     
+    //Constructores
     public Pelicula(){
         this.titulo = "";
         this.costoLicencia = 0;
@@ -24,7 +25,7 @@ public class Pelicula {
         this.costoLicencia = costoLicencia;
         this.socios = socios;
     }
-
+    //Getters y setters.
     public String getTitulo() {
         return titulo;
     }
@@ -48,7 +49,7 @@ public class Pelicula {
     public void setSocios(Socio[] socios) {
         this.socios = socios;
     }
-
+    //Meotodos mostrar.
     @Override
     public String toString() {
         return "Pelicula{" + "titulo=" + titulo + ", costoLicencia=" + costoLicencia + ", socios=" + socios + '}';

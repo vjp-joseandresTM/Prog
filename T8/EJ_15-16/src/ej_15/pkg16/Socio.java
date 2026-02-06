@@ -12,6 +12,7 @@ public class Socio {
     private String nombre;
     private double precioAbonado;
     
+    //Constructores.
     public Socio(){
         this.nombre = "";
         this.precioAbonado = 0;
@@ -21,6 +22,7 @@ public class Socio {
         this.precioAbonado = precioAbonado;
     }
 
+    //Getters y setters.
     public String getNombre() {
         return nombre;
     }
@@ -36,7 +38,8 @@ public class Socio {
     public void setPrecioAbonado(double precioAbonado) {
         this.precioAbonado = precioAbonado;
     }
-
+    
+    //Metodos de mostrar.
     @Override
     public String toString() {
         return "Socios{" + "nombre=" + nombre + ", precioAbonado=" + precioAbonado + '}';
