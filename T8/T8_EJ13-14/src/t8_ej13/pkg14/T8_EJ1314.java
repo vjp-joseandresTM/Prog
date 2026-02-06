@@ -143,7 +143,6 @@ public class T8_EJ1314 {
 
         if (encontrado) {
             System.out.println("El alumno está matriculado.");
-
         } else {
             System.out.println("El alumno NO está matriculado.");
         }
