@@ -16,7 +16,7 @@ public class CuentaTest {
 
     @Test
     public void testSetTitular() {
-        Cuenta c = new Cuenta("Jose", 100);
+        Cuenta c = new Cuenta("Jose",  100);
         c.setTitular("Maria");
         assertEquals("Maria", c.getTitular());
     }

@@ -54,7 +54,7 @@ public class Alumno {
     //Metodos de mostrar
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", edad=" + edad + ", notaMedia=" + notaMedia + '}';
+        return "Nombre=" + nombre + ", edad=" + edad + ", notaMedia=" + notaMedia + '}';
     }
     
     public  void mostrarAlumno(){

@@ -32,6 +32,7 @@ public class T8_EJ1314 {
         menu(clase);
 
     }
+
     //Menu
     public static void menu(Alumno[] clase) {
         Scanner sc = new Scanner(System.in);
@@ -71,6 +72,7 @@ public class T8_EJ1314 {
 
         } while (opcion != 6);
     }
+
     //Metodo que rellena el alumno en x posicion
     public static void rellenarAlumno(Alumno[] clase) {
         Scanner sc = new Scanner(System.in);
@@ -101,6 +103,7 @@ public class T8_EJ1314 {
             }
         }
     }
+
     //Buscamos solo los alumnos q tengan la media por encima de la que introduzcamos
     public static void mediaPorEncima(Alumno[] clase) {
         Scanner sc = new Scanner(System.in);
@@ -113,6 +116,7 @@ public class T8_EJ1314 {
             }
         }
     }
+
     //Mostramos los alumnos que estan suspensos
     public static void suspensos(Alumno[] clase) {
         for (Alumno al : clase) {
@@ -121,20 +125,25 @@ public class T8_EJ1314 {
             }
         }
     }
+
     //Buscamos los alumnos que estan matriculados.
     public static void buscador(Alumno[] clase) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el nombre del alumno a buscar: ");
         String buscarNomb = sc.nextLine();
         boolean encontrado = false;
-        for (Alumno al : clase) {
-            if (al != null && al.getNombre().equals(buscarNomb)) {
+        int i = 0;
+        while (i < clase.length && !encontrado) {
+            if (clase[i] != null && clase[i].getNombre().equalsIgnoreCase(buscarNomb)) {
                 encontrado = true;
+            } else {
+                i++;
             }
         }
 
         if (encontrado) {
             System.out.println("El alumno está matriculado.");
+
         } else {
             System.out.println("El alumno NO está matriculado.");
         }
