@@ -73,7 +73,7 @@ public class T10_EJ5 {
         int posPar = -1;
         int posImpar = -1;
 
-        
+        //Mejorar la busqueda con while
         for (int i = 0; i < lista.size(); i++) {
             if (lista.get(i) == par) {
                 posPar = i;
