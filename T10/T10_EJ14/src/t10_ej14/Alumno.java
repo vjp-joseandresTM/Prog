@@ -12,7 +12,7 @@ public class Alumno {
 
     private String nombreAl;
     private Asignatura[] notas;
-
+    //Constructores
     public Alumno() {
         this.nombreAl = "";
         notas = new Asignatura[0];
@@ -22,7 +22,8 @@ public class Alumno {
         this.nombreAl = nombreAl;
         this.notas = notas;
     }
-
+    //Getters y setters
+    
     public String getNombreAl() {
         return nombreAl;
     }
@@ -38,7 +39,7 @@ public class Alumno {
     public void setNotas(Asignatura[] notas) {
         this.notas = notas;
     }
-
+    //Media
     public float notaMedia() {
         float suma = 0;
         for (Asignatura a : notas) {
@@ -46,7 +47,7 @@ public class Alumno {
         }
         return suma / notas.length;
     }
-
+    //Mostrar
     @Override
     public String toString() {
         return "Alumno{" + "nombreAl=" + nombreAl + ", notas=" + notas + '}';

@@ -12,17 +12,17 @@ public class Asignatura {
 
     private String nombre;
     private float notaAsig;
-
+    //Constructores
     public Asignatura() {
         this.nombre = "";
         this.notaAsig = 0F;
     }
-
+    
     public Asignatura(String nombre, float notaAsig) {
         this.nombre = nombre;
         this.notaAsig = notaAsig;
     }
-
+    //Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -38,7 +38,7 @@ public class Asignatura {
     public void setNotaAsig(float notaAsig) {
         this.notaAsig = notaAsig;
     }
-
+    //Metodo esta suspenso
     public boolean estaSuspensa() {
         if (notaAsig < 5.0) {
             return true;
