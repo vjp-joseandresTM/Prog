@@ -13,10 +13,11 @@ public class Alumno {
     private String nombreAl;
     private Asignatura[] notas;
 
-    public Alumno(){
+    public Alumno() {
         this.nombreAl = "";
         notas = new Asignatura[0];
     }
+
     public Alumno(String nombreAl, Asignatura[] notas) {
         this.nombreAl = nombreAl;
         this.notas = notas;
@@ -38,12 +39,17 @@ public class Alumno {
         this.notas = notas;
     }
 
+    public float notaMedia() {
+        float suma = 0;
+        for (Asignatura a : notas) {
+            suma += a.getNotaAsig();
+        }
+        return suma / notas.length;
+    }
+
     @Override
     public String toString() {
         return "Alumno{" + "nombreAl=" + nombreAl + ", notas=" + notas + '}';
     }
-    
-    
-    
-    
+
 }

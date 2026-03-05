@@ -22,4 +22,29 @@ public class Asignatura {
         this.nombre = nombre;
         this.notaAsig = notaAsig;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public float getNotaAsig() {
+        return notaAsig;
+    }
+
+    public void setNotaAsig(float notaAsig) {
+        this.notaAsig = notaAsig;
+    }
+
+    public boolean estaSuspensa() {
+        if (notaAsig < 5.0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
