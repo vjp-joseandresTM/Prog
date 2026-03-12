@@ -117,7 +117,7 @@ public class T10_Ej15 {
 
         ArrayList<Empleados> todos = new ArrayList<>();
         for (Empresa emp : listaEmpresa) {
-            for (Empleados e : emp.getEmpleados()) {
+            for (Empleados e : emp.getEmpleados()) { //Repasar addAll.
                 todos.add(e);
             }
         }
