@@ -20,7 +20,34 @@ public class ParaExamen1 {
      */
     public static void main(String[] args) {
         Coche[][] aparcamientos = new Coche[FIL][COL];
+        int[] paOrd = {4, 2, 7, 1};
+        ordenar(paOrd);
         menu(aparcamientos);
+
+    }
+
+    public static void ordenar(int[] paOrd) {
+        int aux;
+        System.out.println("DESORDENAU");
+        for (int i = 0; i < paOrd.length; i++) {
+            System.out.println(paOrd[i]);
+        }
+        System.out.println("\n Ordenau");
+        for (int i = 0; i < paOrd.length - 1; i++) {
+            for (int j = 0; j < paOrd.length - 1 - i; j++) {
+                if (paOrd[j] > paOrd[j + 1]) {
+                    aux = paOrd[j];
+                    paOrd[j] = paOrd[j + 1];
+                    paOrd[j + 1] = aux;
+
+                }
+
+            }
+
+        }
+        for (int i = 0; i < paOrd.length; i++) {
+            System.out.println(paOrd[i]);
+        }
     }
 
     public static void menu(Coche[][] parking) {
@@ -117,7 +144,6 @@ public class ParaExamen1 {
                 encontrado = true;
             }
 
-            
             j++;
             if (j == COL) {
                 j = 0;
