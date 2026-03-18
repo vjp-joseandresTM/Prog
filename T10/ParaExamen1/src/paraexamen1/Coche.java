@@ -14,7 +14,7 @@ public class Coche {
 
     private  String matricula;
     private  String marca;
-    private  int[] revisiones = new int[3];
+    private  int[] revisiones;
 
     public Coche() {
         this.matricula = "";
