@@ -18,6 +18,7 @@ public class Campania {
     private String nombre;
     private Set<Donacion> donaciones;
 
+    //Constructores
     public Campania() {
         this.nombre = "";
         this.donaciones = new HashSet<>();
@@ -27,7 +28,7 @@ public class Campania {
         this.nombre = nombre;
         this.donaciones = donaciones;
     }
-
+    //Getters y Setters.
     public String getNombre() {
         return nombre;
     }
@@ -43,16 +44,16 @@ public class Campania {
     public void setDonaciones(Set<Donacion> donaciones) {
         this.donaciones = donaciones;
     }
-
+    //Metodo mostrar.
     @Override
     public String toString() {
         return "Campania{" + "nombre=" + nombre + ", donaciones=" + donaciones + '}';
     }
-
+    //Metodo que añade las donaciones en la campaña
     public void añadirDonacion(Donacion d) {
         donaciones.add(d);
     }
-
+    //Mostramos las donaciones si no estan vacias.
     public void mostrarDonaciones() {
         if (donaciones.isEmpty()) {
             System.out.println("No hay donaciones registradas.");
@@ -62,7 +63,7 @@ public class Campania {
             System.out.println(d);
         }
     }
-
+    //Mostramos las doncaciones que coincidan con el nombre introducido del usuario.
     public void mostrarPorNombre(String nombre) {
         boolean encontrado = false;
         for (Donacion d : donaciones) {
@@ -75,11 +76,11 @@ public class Campania {
             System.out.println("No hay donaciones de ese donante.");
         }
     }
-
+    //Devolvemos el size
     public int numeroDonaciones() {
         return donaciones.size();
     }
-
+    //Calculamos el total sumando las donaciones.
     public double totalRecaudado() {
         double total = 0;
         for (Donacion d : donaciones) {
@@ -87,9 +88,9 @@ public class Campania {
         }
         return total;
     }
-
+    //Ordenamos las donaciones creando una lista.
     public void ordenarDonaciones() {
-        List<Donacion> lista = new ArrayList<>();
+        ArrayList<Donacion> lista = new ArrayList<>();
 
         for (Donacion d : donaciones) {
             int i = 0;
