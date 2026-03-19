@@ -5,6 +5,7 @@
 package t10_ej16;
 
 import java.time.chrono.ThaiBuddhistEra;
+import java.util.Scanner;
 
 /**
  *
@@ -57,5 +58,22 @@ public class Productos {
         return "Productos{" + "producto=" + producto + ", precio=" + precio + ", stock=" + stock + '}';
     }
     
+    public void rellenar(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce el nombre del producto: ");
+        producto = sc.nextLine();
+        sc.nextLine();
+        System.out.print("Introduce el precio: ");
+        precio = sc.nextFloat();
+        System.out.print("Introduce el stock disponible: ");
+        stock = sc.nextInt();
+    }
     
+    public  void mostrar() {
+        System.out.println("\n=== PRODUCTO ===");
+        System.out.println("Nombre: "+ producto);
+        System.out.println("Precio: "+ precio);
+        System.out.println("Stock disponible: "+precio);
+        System.out.println("");
+    }
 }
