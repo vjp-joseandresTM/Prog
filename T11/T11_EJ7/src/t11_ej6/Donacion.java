@@ -11,7 +11,7 @@ package t11_ej6;
 public class Donacion {
     private String nombreDonante;
     private int cantidad;
-    
+    //Constructor nuevo
     public Donacion(){
         this.nombreDonante = "";
         this.cantidad = 0;
@@ -21,7 +21,7 @@ public class Donacion {
         this.nombreDonante = nombreDonante;
         this.cantidad = cantidad;
     }
-
+    //Getters y setters
     public String getNombreDonante() {
         return nombreDonante;
     }
@@ -37,7 +37,7 @@ public class Donacion {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-
+    //Metodo mostrar
     @Override
     public String toString() {
         return "Donacion{" + "nombreDonante=" + nombreDonante + ", cantidad=" + cantidad + '}';
