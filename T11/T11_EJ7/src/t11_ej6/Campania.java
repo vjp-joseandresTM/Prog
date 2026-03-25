@@ -28,6 +28,12 @@ public class Campania {
         this.nombre = nombre;
         this.donaciones = donaciones;
     }
+
+    public Campania(String nombre) {  //Nuevo constructor String
+        this.nombre = nombre;
+        this.donaciones = new HashSet<>();
+    }
+
     //Getters y Setters.
     public String getNombre() {
         return nombre;
@@ -44,15 +50,18 @@ public class Campania {
     public void setDonaciones(Set<Donacion> donaciones) {
         this.donaciones = donaciones;
     }
+
     //Metodo mostrar.
     @Override
     public String toString() {
         return "Campania{" + "nombre=" + nombre + ", donaciones=" + donaciones + '}';
     }
+
     //Metodo que añade las donaciones en la campaña
     public void añadirDonacion(Donacion d) {
         donaciones.add(d);
     }
+
     //Mostramos las donaciones si no estan vacias.
     public void mostrarDonaciones() {
         if (donaciones.isEmpty()) {
@@ -63,6 +72,7 @@ public class Campania {
             System.out.println(d);
         }
     }
+
     //Mostramos las doncaciones que coincidan con el nombre introducido del usuario.
     public void mostrarPorNombre(String nombre) {
         boolean encontrado = false;
@@ -76,10 +86,12 @@ public class Campania {
             System.out.println("No hay donaciones de ese donante.");
         }
     }
+
     //Devolvemos el size
     public int numeroDonaciones() {
         return donaciones.size();
     }
+
     //Calculamos el total sumando las donaciones.
     public double totalRecaudado() {
         double total = 0;
@@ -88,6 +100,7 @@ public class Campania {
         }
         return total;
     }
+
     //Ordenamos las donaciones creando una lista.
     public void ordenarDonaciones() {
         ArrayList<Donacion> lista = new ArrayList<>();
