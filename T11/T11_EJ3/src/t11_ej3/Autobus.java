@@ -26,6 +26,11 @@ public class Autobus {
         this.conductores = new HashMap<>();
     }
 
+    public Autobus(String matricula) {
+        this.matricula = matricula;
+        this.conductores = new HashMap<>();
+    }
+
     public String getMatricula() {
         return matricula;
     }
@@ -40,6 +45,10 @@ public class Autobus {
 
     public void setConductores(Map<String, Conductor> conductores) {
         this.conductores = conductores;
+    }
+
+    public void addConductor(Conductor c) {
+        conductores.put(c.getDni(), c);
     }
 
     @Override

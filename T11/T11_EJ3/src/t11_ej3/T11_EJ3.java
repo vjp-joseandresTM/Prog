@@ -15,24 +15,26 @@ public class T11_EJ3 {
     /**
      * @param args the command line arguments
      */
+    
+    //Creamos un array con las Dársenas de l bus
     public static void main(String[] args) {
         Autobus[] darsenas = new Autobus[6];
         menuPrincipal(darsenas);
     }
-
+    //Menu con que llama a los metodos necesarios
     public static void menuPrincipal(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
         do {
-            System.out.println("\n--- MENÚ AUTOBUSES ---");
-            System.out.println("1. Aparcar autobús");
-            System.out.println("2. Mostrar dársenas libres");
-            System.out.println("3. Buscar autobús por matrícula");
+            System.out.println("\n--- MENU AUTOBUSES ---");
+            System.out.println("1. Aparcar autobus");
+            System.out.println("2. Mostrar darsenas libres");
+            System.out.println("3. Buscar autobu por matricula");
             System.out.println("4. Buscar conductor");
-            System.out.println("5. Autobús con más conductores");
+            System.out.println("5. Autobus con mas conductores");
             System.out.println("6. Salir");
-            System.out.print("Opción: ");
+            System.out.print("Opcion: ");
             opcion = sc.nextInt();
             sc.nextLine();
 
@@ -50,18 +52,18 @@ public class T11_EJ3 {
             }
         } while (opcion != 6);
     }
-
+    //Metodo aparcar que busca una posicion libre en el rango predeterminado y permite rellenar de conductores a un bus.               
     public static void aparcar(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
         int pos;
 
         do {
-            System.out.print("Introduce posición (0-5): ");
+            System.out.print("Introduce posicion (0-5): ");
             pos = sc.nextInt();
             sc.nextLine();
         } while (pos < 0 || pos > 5 || darsenas[pos] != null);
 
-        System.out.print("Matrícula del autobús: ");
+        System.out.print("Matricula del autobus: ");
         String mat = sc.nextLine();
 
         Autobus a = new Autobus(mat);
@@ -75,15 +77,15 @@ public class T11_EJ3 {
 
             a.addConductor(new Conductor(dni, nombre));
 
-            System.out.print("¿Añadir otro conductor? (s/n): ");
+            System.out.print("¿Quiere añadirr otro conductor? (s/n): ");
             seguir = sc.nextLine();
         } while (seguir.equalsIgnoreCase("s"));
 
         darsenas[pos] = a;
     }
-
+    //Mostramos las posiciones libres del bus
     public static void mostrarLibres(Autobus[] darsenas) {
-        System.out.println("Dársenas libres:");
+        System.out.println("Darsenas libres:");
         for (int i = 0; i < darsenas.length; i++) {
             if (darsenas[i] == null) {
                 System.out.println(" - Posición " + i);
