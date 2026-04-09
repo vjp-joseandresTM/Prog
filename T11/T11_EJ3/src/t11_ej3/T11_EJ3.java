@@ -15,12 +15,12 @@ public class T11_EJ3 {
     /**
      * @param args the command line arguments
      */
-    
     //Creamos un array con las Dársenas de l bus
     public static void main(String[] args) {
         Autobus[] darsenas = new Autobus[6];
         menuPrincipal(darsenas);
     }
+
     //Menu con que llama a los metodos necesarios
     public static void menuPrincipal(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
@@ -52,6 +52,7 @@ public class T11_EJ3 {
             }
         } while (opcion != 6);
     }
+
     //Metodo aparcar que busca una posicion libre en el rango predeterminado y permite rellenar de conductores a un bus.               
     public static void aparcar(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
@@ -83,6 +84,7 @@ public class T11_EJ3 {
 
         darsenas[pos] = a;
     }
+
     //Mostramos las posiciones libres del bus
     public static void mostrarLibres(Autobus[] darsenas) {
         System.out.println("Darsenas libres:");
@@ -93,34 +95,53 @@ public class T11_EJ3 {
         }
     }
 
+    //Buscaremos el autobus segun su matricula
     public static void buscarAutobus(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce matrícula: ");
         String mat = sc.nextLine();
 
-        for (Autobus a : darsenas) {
+        int i = 0;
+        boolean encontrado = false;
+
+        while (i < darsenas.length && !encontrado) {
+            Autobus a = darsenas[i];
             if (a != null && a.getMatricula().equalsIgnoreCase(mat)) {
                 System.out.println(a);
-                return;
+                encontrado = true;
             }
+            i++;
         }
-        System.out.println("No existe un autobús con esa matrícula.");
-    }
 
+        if (!encontrado) {
+            System.out.println("No existe un autobús con esa matrícula.");
+        }
+    }
+    
+    //Buscamos conductores en fncion de su dni
     public static void buscarConductor(Autobus[] darsenas) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce DNI del conductor: ");
         String dni = sc.nextLine();
 
-        for (Autobus a : darsenas) {
-            if (a != null && a.getConductores().containsKey(dni)) {
-                System.out.println("El conductor está en el autobús con matrícula: " + a.getMatricula());
-                return;
-            }
-        }
-        System.out.println("No se ha encontrado ese conductor.");
-    }
+        int i = 0;
+        boolean encontrado = false;
 
+        while (i < darsenas.length && !encontrado) {
+            Autobus a = darsenas[i];
+            if (a != null && a.getConductores().containsKey(dni)) {
+                System.out.println("El conductor esta en el autobuss cuya matrícula es: " + a.getMatricula());
+                encontrado = true;
+            }
+            i++;
+        }
+
+        if (!encontrado) {
+            System.out.println("No se ha encontrado ese conductor.");
+        }
+    }
+    
+    //Buscamos cual es el autobus con mas conductores
     public static void mostrarMayorConductores(Autobus[] darsenas) {
         int posMax = -1;
         int max = -1;

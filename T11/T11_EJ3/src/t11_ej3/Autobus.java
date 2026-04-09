@@ -15,7 +15,7 @@ public class Autobus {
 
     private String matricula;
     private Map<String, Conductor> conductores;
-
+    //Constructoters
     public Autobus() {
         this.matricula = "";
         this.conductores = new HashMap<>();
@@ -30,7 +30,7 @@ public class Autobus {
         this.matricula = matricula;
         this.conductores = new HashMap<>();
     }
-
+    //Getters y Setters
     public String getMatricula() {
         return matricula;
     }
@@ -46,11 +46,11 @@ public class Autobus {
     public void setConductores(Map<String, Conductor> conductores) {
         this.conductores = conductores;
     }
-
+    //Metodo add.
     public void addConductor(Conductor c) {
         conductores.put(c.getDni(), c);
     }
-
+    //Metodo mostrar
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Autobús " + matricula + "\nConductores:\n");

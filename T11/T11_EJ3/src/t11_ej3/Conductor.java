@@ -12,7 +12,7 @@ public class Conductor {
 
     private String dni;
     private String nombre;
-
+    //Constructores
     public Conductor() {
         this.dni = "";
         this.nombre = "";
@@ -22,7 +22,7 @@ public class Conductor {
         this.dni = dni;
         this.nombre = nombre;
     }
-
+    //Getters y Setters
     public String getDni() {
         return dni;
     }
@@ -38,7 +38,7 @@ public class Conductor {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    //Metodo mostrar.
     @Override
     public String toString() {
         return nombre + " (" + dni + ")";
