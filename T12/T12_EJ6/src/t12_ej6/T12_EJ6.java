@@ -20,13 +20,13 @@ public class T12_EJ6 {
      */
     public static void main(String[] args) {
         int[] numeros = new int[100];//Creacion del array
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {//Rellenamos el array con numeros pares
             numeros[i] = i * 2;
         }
         impresora(numeros);
         mostrarFichero();
     }
-
+    //Meotddo que vuelca el array en el fichero
     public static void impresora(int numeros[]) {
         Scanner sc = new Scanner(System.in);
         FileWriter fw = null;
@@ -65,7 +65,7 @@ public class T12_EJ6 {
         }
 
     }
-
+    //Metodo que lee el fichero
     public static void mostrarFichero() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce el nombre del fichero que quiere leer: ");
