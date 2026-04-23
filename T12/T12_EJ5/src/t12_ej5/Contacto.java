@@ -52,5 +52,11 @@ public class Contacto {
         this.numero = numero;
     }
     
+    
     //NO IMPLEMENTO METODOS MOSTRAR PUES NO SON NECESARIOS EN ESTE EJERCICIO AL TENER QUE LEER EL FICHERO Y NO LOS OBJETOS DE LA CLASE, NO ES NECESARIO 8D
+
+    @Override
+    public String toString() {
+        return "Contacto{" + "nombre=" + nombre + ", edad=" + edad + ", numero=" + numero + '}';
+    }
 }

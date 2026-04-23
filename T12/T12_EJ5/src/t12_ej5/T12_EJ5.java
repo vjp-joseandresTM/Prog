@@ -5,6 +5,7 @@
 package t12_ej5;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileReader;
@@ -85,9 +86,7 @@ public class T12_EJ5 {
         try (FileWriter fw = new FileWriter("contactos.txt", true)) {
             for (Contacto c : contactos) {
                 fw.write(c.getNombre() + ";" + c.getEdad() + ";" + c.getNumero() + "\n");
-                fw.write("");
-                fw.write("------------------------------------------------");
-                fw.write("");
+
             }
             System.out.println("Contactos guardados correctamente en agenda.txt");
         } catch (IOException e) {
@@ -103,9 +102,13 @@ public class T12_EJ5 {
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
             }
+        } catch(FileNotFoundException e){
+            
+            System.out.println("Error, no se encuentra el fichero.");
         } catch (IOException e) {
             System.out.println("Error con el Fichero");
         }
+  
     }
 
 }
