@@ -21,9 +21,10 @@ public class T12_EJ9 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        leerFichero();
+        leerFichero();//Metodo que llama al metodo de leer y escribir el fichero.
     }
-
+    
+    //Leemos y escribimos el fichero
     public static void leerFichero() {
         FileReader fr = null;
         BufferedReader br = null;
@@ -65,7 +66,7 @@ public class T12_EJ9 {
         }
 
     }
-
+    //Invertimos el texto por caracteres. 
     public static String invertir(String texto) {
         String invertida = "";
         for (int i = texto.length() - 1; i >= 0; i--) {
