@@ -4,6 +4,7 @@
  */
 package t12_ej13;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,13 +19,15 @@ public class T12_EJ13 {
     /**
      * @param args the command line arguments
      */
+    //Main en el que se llama a los metodos.
     public static void main(String[] args) {
 
         System.out.println("===== REGISTRO DE BECARIOS =====");
         String registro = pedirDatos();
          guardarEnFichero(registro); 
     }
-
+    
+    //Pedimos los distintos datos q se necesitan.
     public static String pedirDatos() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce nombre + apellidos: ");
@@ -42,7 +45,8 @@ public class T12_EJ13 {
         double ingresos = Double.parseDouble(sc.nextLine());
         return nombre + ";" + sexo + ";" + edad + ";" + notas + ";" + residencia + ";" + ingresos;
     }
-
+    
+    //Pedimos la edad al usuario y hacemos la comprobacion de que este en el rango.
     public static int pedirEdad() {
         boolean valido = false;
         Scanner sc = new Scanner(System.in);
@@ -57,9 +61,10 @@ public class T12_EJ13 {
             }
 
         }
-        return edadP;
+        return edadP;//Se devuelve la edad.
     }
-
+    
+    //Guardamos en el fichero.
     public static void guardarEnFichero(String cadena) {
         FileWriter fw = null;
         PrintWriter pw = null;
@@ -69,8 +74,11 @@ public class T12_EJ13 {
             pw = new PrintWriter(fw);
 
             pw.println(cadena);
-        } catch (IOException e) {
-            System.out.println("Error");
+        }catch(FileNotFoundException e){
+            System.out.println("Error al abrir el fichero.");
+        } 
+        catch (IOException e) {
+            System.out.println("Error al escribir en el fichero.");
         } finally {
             try {
                 if (pw != null) {
